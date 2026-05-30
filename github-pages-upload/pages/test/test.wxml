@@ -1,0 +1,31 @@
+<view class="page test-page">
+  <view class="topline">
+    <text class="counter">{{currentNumber}} / {{total}}</text>
+    <text class="group">{{currentQuestion.group}}</text>
+  </view>
+
+  <view class="progress-track">
+    <view class="progress-fill" style="width: {{progress}}%;"></view>
+  </view>
+
+  <view class="soft-panel question-card">
+    <text class="question-title">{{currentQuestion.title}}</text>
+    <view class="options">
+      <button
+        wx:for="{{currentQuestion.options}}"
+        wx:key="id"
+        class="option {{selectedOptionId === item.id ? 'option-active' : ''}}"
+        bindtap="chooseOption"
+        data-option-id="{{item.id}}"
+      >
+        <text class="option-mark">{{selectedOptionId === item.id ? '✓' : ''}}</text>
+        <text class="option-text">{{item.text}}</text>
+      </button>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="secondary-button action-button" bindtap="prevQuestion" disabled="{{currentIndex === 0}}">上一题</button>
+    <button class="primary-button action-button" bindtap="nextQuestion">{{isLast ? '生成报告' : '下一题'}}</button>
+  </view>
+</view>
