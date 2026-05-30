@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>取向自我探索网页版</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="homeView" class="view home-view" aria-labelledby="homeTitle">
+      <div class="hero">
+        <p class="eyebrow">PRIVATE SELF EXPLORATION</p>
+        <h1 id="homeTitle">温柔地理解自己的吸引方式</h1>
+        <p class="subtitle">32 个生活化选择题，帮助你从情感、浪漫、身体吸引、经验与认同几个角度，看见此刻的自己。</p>
+      </div>
+
+      <div class="notice-grid">
+        <article class="panel notice-panel">
+          <h2>开始前的小提示</h2>
+          <p>这不是诊断，也不会替你贴上最终标签。答案只保存在本机浏览器中，不上传、不排名、不分享。</p>
+          <p>请在安全、私密、理性的环境中使用。你可以随时重新开始。</p>
+        </article>
+        <div class="basis-list" aria-label="测试原则">
+          <div class="basis-item">
+            <span>01</span>
+            <p>吸引、经验与身份认同分开观察</p>
+          </div>
+          <div class="basis-item">
+            <span>02</span>
+            <p>允许不确定、流动、低吸引存在</p>
+          </div>
+          <div class="basis-item">
+            <span>03</span>
+            <p>报告只给线索，命名权始终在你</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="startButton" class="primary-button" type="button">开始测试</button>
+    </section>
+
+    <section id="testView" class="view test-view is-hidden" aria-labelledby="questionTitle">
+      <div class="topline">
+        <span id="counter" class="counter">1 / 32</span>
+        <span id="groupLabel" class="group-label">情感吸引</span>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+
+      <article class="panel question-card">
+        <h2 id="questionTitle">题目</h2>
+        <div id="optionsList" class="options-list"></div>
+      </article>
+
+      <p id="inlineMessage" class="inline-message" role="status" aria-live="polite"></p>
+
+      <div class="actions">
+        <button id="prevButton" class="secondary-button" type="button">上一题</button>
+        <button id="nextButton" class="primary-button" type="button" data-final-label="生成报告">下一题</button>
+      </div>
+    </section>
+
+    <section id="resultView" class="view result-view is-hidden" aria-labelledby="reportTitle">
+      <article class="panel report-card">
+        <p class="eyebrow">SELF EXPLORATION REPORT</p>
+        <h1 id="reportTitle">你的吸引模式更接近：尚在探索型</h1>
+        <p id="reportSummary" class="report-summary"></p>
+      </article>
+
+      <article class="panel dimensions-card">
+        <h2>维度线索</h2>
+        <div id="dimensionsList" class="dimensions-list"></div>
+      </article>
+
+      <article class="panel reading-card">
+        <h2>温和解读</h2>
+        <div id="sectionsList" class="sections-list"></div>
+        <p id="reportNote" class="report-note"></p>
+      </article>
+
+      <button id="restartButton" class="primary-button" type="button">重新测试</button>
+    </section>
+  </main>
+
+  <script src="./questions.js"></script>
+  <script src="./scoring.js"></script>
+  <script src="./report.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

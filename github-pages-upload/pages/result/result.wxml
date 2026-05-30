@@ -1,0 +1,39 @@
+<view class="page result-page" wx:if="{{report}}">
+  <view class="soft-panel report-card">
+    <text class="report-kicker">SELF EXPLORATION REPORT</text>
+    <text class="report-title">{{report.title}}</text>
+    <text class="report-summary">{{report.summary}}</text>
+  </view>
+
+  <view class="soft-panel dimensions-card">
+    <text class="section-title">维度线索</text>
+    <view class="dimension" wx:for="{{report.dimensions}}" wx:key="key">
+      <view class="dimension-head">
+        <text class="dimension-label">{{item.label}}</text>
+        <text class="dimension-value">{{item.value}}%</text>
+      </view>
+      <view class="bar-track">
+        <view class="bar-fill" style="width: {{item.value}}%;"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="soft-panel reading-card">
+    <text class="section-title">温和解读</text>
+    <view class="reading-section" wx:for="{{report.sections}}" wx:key="heading">
+      <text class="reading-heading">{{item.heading}}</text>
+      <text class="reading-body">{{item.body}}</text>
+    </view>
+    <text class="note">{{report.note}}</text>
+  </view>
+
+  <button class="primary-button" bindtap="restart">重新测试</button>
+</view>
+
+<view class="page empty-page" wx:else>
+  <view class="soft-panel empty-card">
+    <text class="section-title">还没有报告</text>
+    <text class="report-summary">请先完成 32 道选择题，再回到这里查看结果。</text>
+  </view>
+  <button class="primary-button" bindtap="restart">开始测试</button>
+</view>

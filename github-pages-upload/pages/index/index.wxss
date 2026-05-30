@@ -1,0 +1,82 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 34rpx;
+}
+
+.hero {
+  padding-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 22rpx;
+}
+
+.eyebrow {
+  color: #9d7f3f;
+  font-size: 22rpx;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.title {
+  color: #1f332f;
+  font-size: 54rpx;
+  line-height: 1.18;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #526963;
+  font-size: 29rpx;
+  line-height: 1.75;
+}
+
+.notice {
+  padding: 34rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.notice-title {
+  color: #2f5d50;
+  font-size: 31rpx;
+  font-weight: 700;
+}
+
+.notice-text {
+  color: #526963;
+  font-size: 27rpx;
+  line-height: 1.75;
+}
+
+.basis {
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.basis-item {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  min-height: 72rpx;
+}
+
+.basis-number {
+  width: 56rpx;
+  color: #9d7f3f;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.basis-text {
+  flex: 1;
+  color: #334944;
+  font-size: 28rpx;
+  line-height: 1.55;
+}
+
+.start-button {
+  margin-top: auto;
+}
