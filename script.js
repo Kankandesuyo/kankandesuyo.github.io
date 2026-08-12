@@ -48,8 +48,9 @@ const updateProgress = () => {
   if (!reduceMotion && hero) {
     const fadeDistance = Math.max(hero.offsetHeight * 0.68, 420);
     const heroFade = Math.min(window.scrollY / fadeDistance, 1);
-    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .58));
-    hero.style.setProperty('--hero-shift', `${heroFade * -20}px`);
+    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .68));
+    hero.style.setProperty('--hero-shift', `${heroFade * -24}px`);
+    hero.style.setProperty('--hero-blur', `${heroFade * 5}px`);
   }
   if (!reduceMotion) {
     activeCards.forEach((card) => {
@@ -130,9 +131,9 @@ const applyFilter = async (button) => {
 
   if (!reduceMotion) {
     await Promise.all(outgoing.map((card, index) => animateCard(card, [
-      { opacity: 1, transform: 'translateY(0) scale(1)' },
-      { opacity: 0, transform: 'translateY(10px) scale(.985)' },
-    ], { duration: 280, delay: index * 22, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both' })));
+      { opacity: 1, filter: 'blur(0)', transform: 'translateY(0) scale(1)' },
+      { opacity: 0, filter: 'blur(7px)', transform: 'translateY(12px) scale(.985)' },
+    ], { duration: 360, delay: index * 24, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both' })));
   }
 
   outgoing.forEach((card) => {
@@ -148,9 +149,9 @@ const applyFilter = async (button) => {
 
   if (!reduceMotion) {
     await Promise.all(incoming.map((card, index) => animateCard(card, [
-      { opacity: 0, transform: 'translateY(18px) scale(.985)' },
-      { opacity: 1, transform: 'translateY(0) scale(1)' },
-    ], { duration: 520, delay: index * 55, easing: 'cubic-bezier(.2,.75,.2,1)', fill: 'both' })));
+      { opacity: 0, filter: 'blur(9px)', transform: 'translateY(20px) scale(.985)' },
+      { opacity: 1, filter: 'blur(0)', transform: 'translateY(0) scale(1)' },
+    ], { duration: 620, delay: index * 55, easing: 'cubic-bezier(.2,.75,.2,1)', fill: 'both' })));
   }
 
   filters.forEach((item) => { item.disabled = false; });
