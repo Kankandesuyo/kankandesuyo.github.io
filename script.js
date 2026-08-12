@@ -37,6 +37,18 @@ const updateProgress = () => {
     hero.style.setProperty('--hero-shift', `${heroFade * -28}px`);
     hero.style.setProperty('--hero-blur', `${heroFade * 1.5}px`);
   }
+  if (!reduceMotion) {
+    cards.forEach((card) => {
+      if (card.classList.contains('hidden')) return;
+      const rect = card.getBoundingClientRect();
+      const viewportCenter = window.innerHeight / 2;
+      const cardCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = Math.abs(cardCenter - viewportCenter);
+      const activeRange = Math.max(window.innerHeight * .8, rect.height * .7);
+      const stageProgress = Math.max(0, 1 - distanceFromCenter / activeRange);
+      card.style.setProperty('--project-progress', stageProgress.toFixed(3));
+    });
+  }
   scrollFrame = 0;
 };
 window.addEventListener('scroll', () => {
