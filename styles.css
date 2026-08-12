@@ -110,12 +110,15 @@ h1 em { font-family: Georgia, "Songti SC", serif; font-weight: 500; color: trans
 .project-index { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; opacity: .6; }
 .status { display: inline-flex; align-items: center; gap: 6px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; font-weight: 700; letter-spacing: .06em; }
 .status i { width: 7px; height: 7px; border-radius: 50%; background: #5bdc87; box-shadow: 0 0 0 4px rgba(91,220,135,.14); }
+.status.local i { background: #6f8cff; box-shadow: 0 0 0 4px rgba(111,140,255,.14); }
 .project-symbol { width: 82px; height: 82px; margin: 32px 0 26px; display: grid; place-items: center; border-radius: 24px; background: #edf1e9; border: 1px solid var(--line); font-size: 23px; font-weight: 850; letter-spacing: -.06em; transform: rotate(-3deg); }
 .featured .project-symbol { background: var(--lime); color: var(--ink); border-color: transparent; box-shadow: 0 12px 40px rgba(201,255,71,.18); }
 .word { background: #fff0ce; }
 .graph { background: #e6eaff; color: #334bcb; }
 .atlas { background: #daf6e6; color: #12613b; }
 .ielts { background: #ffe3e5; color: #a22d3d; }
+.career { background: #dff2ff; color: #185f8c; font-size: 19px; letter-spacing: -.08em; }
+.voice { background: #e9e3ff; color: #5835a5; }
 .project-type { margin: 0 0 5px; font-size: 10px; font-weight: 800; letter-spacing: .13em; opacity: .62; }
 .project-card h3 { margin: 0 0 15px; font-size: clamp(30px, 4vw, 44px); line-height: 1; letter-spacing: -.045em; }
 .project-card > p:not(.project-type) { margin: 0; color: var(--muted); font-size: 15px; }
@@ -132,6 +135,7 @@ h1 em { font-family: Georgia, "Songti SC", serif; font-weight: 500; color: trans
 .featured .card-actions { border-color: rgba(255,255,255,.16); }
 .card-actions a { text-decoration: none; font-size: 13px; font-weight: 800; }
 .card-actions a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.availability { margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 700; }
 
 .approach { padding: 90px 0; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.5); }
