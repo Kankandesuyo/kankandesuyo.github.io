@@ -20,7 +20,9 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
 } else {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
     });
   }, { threshold: 0.1, rootMargin: '-4% 0px -7% 0px' });
   revealItems.forEach((item) => observer.observe(item));
@@ -46,9 +48,8 @@ const updateProgress = () => {
   if (!reduceMotion && hero) {
     const fadeDistance = Math.max(hero.offsetHeight * 0.68, 420);
     const heroFade = Math.min(window.scrollY / fadeDistance, 1);
-    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .72));
-    hero.style.setProperty('--hero-shift', `${heroFade * -28}px`);
-    hero.style.setProperty('--hero-blur', `${heroFade * 1.5}px`);
+    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .58));
+    hero.style.setProperty('--hero-shift', `${heroFade * -20}px`);
   }
   if (!reduceMotion) {
     activeCards.forEach((card) => {
@@ -129,9 +130,9 @@ const applyFilter = async (button) => {
 
   if (!reduceMotion) {
     await Promise.all(outgoing.map((card, index) => animateCard(card, [
-      { opacity: 1, transform: 'translateY(0) scale(1)', filter: 'blur(0)' },
-      { opacity: 0, transform: 'translateY(14px) scale(.975)', filter: 'blur(5px)' },
-    ], { duration: 220, delay: index * 24, easing: 'ease-in', fill: 'both' })));
+      { opacity: 1, transform: 'translateY(0) scale(1)' },
+      { opacity: 0, transform: 'translateY(10px) scale(.985)' },
+    ], { duration: 280, delay: index * 22, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both' })));
   }
 
   outgoing.forEach((card) => {
@@ -147,9 +148,9 @@ const applyFilter = async (button) => {
 
   if (!reduceMotion) {
     await Promise.all(incoming.map((card, index) => animateCard(card, [
-      { opacity: 0, transform: 'translateY(24px) scale(.975)', filter: 'blur(6px)' },
-      { opacity: 1, transform: 'translateY(0) scale(1)', filter: 'blur(0)' },
-    ], { duration: 460, delay: index * 70, easing: 'cubic-bezier(.2,.75,.2,1)', fill: 'both' })));
+      { opacity: 0, transform: 'translateY(18px) scale(.985)' },
+      { opacity: 1, transform: 'translateY(0) scale(1)' },
+    ], { duration: 520, delay: index * 55, easing: 'cubic-bezier(.2,.75,.2,1)', fill: 'both' })));
   }
 
   filters.forEach((item) => { item.disabled = false; });
