@@ -136,6 +136,7 @@ h1 em { font-family: Georgia, "Songti SC", serif; font-weight: 500; color: trans
 .card-actions a { text-decoration: none; font-size: 13px; font-weight: 800; }
 .card-actions a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .availability { margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 700; }
+.availability-only { margin-left: 0; }
 
 .approach { padding: 90px 0; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.5); }
