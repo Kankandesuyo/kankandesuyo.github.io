@@ -2,6 +2,7 @@ const filters = document.querySelectorAll('.filter');
 const cards = document.querySelectorAll('.project-card');
 const hero = document.querySelector('.hero');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const activeCards = new Set();
 
 document.documentElement.classList.add('motion-ready');
 
@@ -25,6 +26,18 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => observer.observe(item));
 }
 
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  cards.forEach((card) => activeCards.add(card));
+} else {
+  const stageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) activeCards.add(entry.target);
+      else activeCards.delete(entry.target);
+    });
+  }, { rootMargin: '70% 0px 70% 0px' });
+  cards.forEach((card) => stageObserver.observe(card));
+}
+
 const progress = document.querySelector('.scroll-progress span');
 let scrollFrame = 0;
 const updateProgress = () => {
@@ -38,7 +51,7 @@ const updateProgress = () => {
     hero.style.setProperty('--hero-blur', `${heroFade * 1.5}px`);
   }
   if (!reduceMotion) {
-    cards.forEach((card) => {
+    activeCards.forEach((card) => {
       if (card.classList.contains('hidden')) return;
       const rect = card.getBoundingClientRect();
       const viewportCenter = window.innerHeight / 2;
@@ -144,3 +157,26 @@ filters.forEach((button) => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const copyEmailButton = document.getElementById('copy-email');
+const copyStatus = document.getElementById('copy-status');
+copyEmailButton?.addEventListener('click', async () => {
+  const email = copyEmailButton.dataset.email;
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(email);
+    copied = true;
+  } catch {
+    const helper = document.createElement('textarea');
+    helper.value = email;
+    helper.setAttribute('readonly', '');
+    helper.style.position = 'fixed';
+    helper.style.opacity = '0';
+    document.body.appendChild(helper);
+    helper.select();
+    copied = document.execCommand('copy');
+    helper.remove();
+  }
+  copyStatus.textContent = copied ? '邮箱已复制，可以直接粘贴到邮件客户端。' : `请复制邮箱：${email}`;
+  if (copied) copyEmailButton.firstChild.textContent = '已复制 ';
+});
