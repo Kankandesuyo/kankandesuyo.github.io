@@ -77,6 +77,13 @@ if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
       card.style.setProperty('--my', `${event.clientY - rect.top}px`);
     });
   });
+  document.querySelectorAll('.button, .filter').forEach((control) => {
+    control.addEventListener('pointermove', (event) => {
+      const rect = control.getBoundingClientRect();
+      control.style.setProperty('--glass-x', `${event.clientX - rect.left}px`);
+      control.style.setProperty('--glass-y', `${event.clientY - rect.top}px`);
+    });
+  });
 }
 
 const animateCount = (node) => {
