@@ -46,11 +46,11 @@ const updateProgress = () => {
   const distance = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.transform = `scaleX(${distance > 0 ? window.scrollY / distance : 0})`;
   if (!reduceMotion && hero) {
-    const fadeDistance = Math.max(hero.offsetHeight * 0.68, 420);
+    const fadeDistance = Math.max(hero.offsetHeight * 0.92, 560);
     const heroFade = Math.min(window.scrollY / fadeDistance, 1);
-    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .68));
-    hero.style.setProperty('--hero-shift', `${heroFade * -24}px`);
-    hero.style.setProperty('--hero-blur', `${heroFade * 5}px`);
+    hero.style.setProperty('--hero-opacity', String(1 - heroFade * .82));
+    hero.style.setProperty('--hero-shift', `${heroFade * -38}px`);
+    hero.style.setProperty('--hero-blur', `${heroFade * 4}px`);
   }
   if (!reduceMotion) {
     activeCards.forEach((card) => {
