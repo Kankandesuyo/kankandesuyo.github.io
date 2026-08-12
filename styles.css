@@ -237,7 +237,8 @@ h1 em { display: block; white-space: nowrap; font: inherit; font-style: normal; 
 .contact-overline { margin: 0 0 22px; color: #8eb8ff; font-size: 12px; font-weight: 700; letter-spacing: .12em; }
 .contact-band h2 + p { max-width: 680px; margin: 24px auto 0; color: #a1a1a6; font-size: 17px; }
 .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.contact-email { color: #a1a1a6; font-size: 13px; text-underline-offset: 4px; }
+.contact-details { display: flex; align-items: center; justify-content: center; gap: 10px; color: #a1a1a6; font-size: 13px; }
+.contact-details a { text-underline-offset: 4px; }
 .copy-status { min-height: 20px; margin: -18px 0 0; color: #8eb8ff; font-size: 12px; }
 .button.light { color: #fff; background: var(--blue); }
 footer { padding: 25px max(24px, calc((100vw - 1120px) / 2)); display: flex; justify-content: space-between; gap: 20px; color: #86868b; background: #050505; border-top: 1px solid #242426; font-size: 11px; }
