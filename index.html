@@ -23,6 +23,7 @@
     <nav aria-label="主导航">
       <a href="#projects">项目</a>
       <a href="#approach">方法</a>
+      <a class="nav-resume" href="./assets/li-jiahao-software-engineering-resume.pdf" target="_blank" rel="noreferrer">简历 ↗</a>
       <a class="nav-github" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
   </header>
@@ -33,6 +34,7 @@
       <p class="hero-copy hero-reveal" style="--delay: .2s">我设计并实现真正可运行的软件。<br>从一个清晰的问题出发，用工程与 AI 把想法落地为可用、可测、可交付的产品。</p>
       <div class="hero-actions hero-reveal" style="--delay: .34s">
         <a class="button primary" href="#projects">查看精选项目 <span>↓</span></a>
+        <a class="button secondary resume-button" href="./assets/li-jiahao-software-engineering-resume.pdf" target="_blank" rel="noreferrer">查看简历 <span>↗</span></a>
         <a class="button secondary" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
       </div>
       <dl class="proof-strip hero-reveal" style="--delay: .43s" aria-label="作品集数据">
@@ -60,7 +62,7 @@
         <article class="project-card featured scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">01</span><span class="status live"><i></i> LIVE DEMO</span></div>
           <div class="project-symbol shield" aria-hidden="true">CG</div>
-          <div class="product-visual" data-visual="codeguard" aria-hidden="true"><div class="visual-canvas code-screen"><i class="window-dots"></i><div class="code-lines"><span></span><span></span><span></span><span></span><span></span></div><div class="scan-line"></div></div><div class="risk-orbit"><b>78</b><small>RISK SCORE</small></div></div>
+          <div class="product-visual" data-visual="codeguard"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>codeguard / local security agent</span></div><img src="./assets/project-previews/codeguard.png" alt="CodeGuard 本地安全审查工作台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>49</b><span>自动化测试</span><i></i><b>0</b><span>npm 漏洞</span></div></div>
           <p class="project-type">LOCAL-FIRST SECURITY AGENT</p>
           <h3>CodeGuard</h3>
           <p>在代码提交前完成多语言静态安全审查。浏览器版在 Web Worker 中本地分析，确定性规则负责发现问题，云端模型仅在用户同意后解释已验证证据。</p>
@@ -79,7 +81,7 @@
         <article class="project-card scroll-reveal" data-categories="learning">
           <div class="card-topline"><span class="project-index">02</span><span class="status live"><i></i> LIVE PRODUCT</span></div>
           <div class="project-symbol word" aria-hidden="true">WF</div>
-          <div class="product-visual" data-visual="wordflow" aria-hidden="true"><div class="word-deck"><div class="word-card back">review</div><div class="word-card middle">recall</div><div class="word-card front"><small>DAILY WORD</small><strong>resilient</strong><span>有韧性的 · 能恢复的</span></div></div><div class="streak-ring"><b>12</b><small>DAY STREAK</small></div></div>
+          <div class="product-visual" data-visual="wordflow"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>wordflow / account learning</span></div><img src="./assets/project-previews/wordflow.png" alt="WordFlow IELTS 学习账号界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>7</b><span>主题课程</span><i></i><b>7901</b><span>IELTS 词汇</span></div></div>
           <p class="project-type">OFFLINE-FIRST LEARNING PRODUCT</p>
           <h3>WordFlow IELTS</h3>
           <p>围绕“学习—回忆—评分—到期复习”闭环设计的 IELTS 主题词汇训练器。离线时核心学习仍可用，登录后再安全合并跨设备进度。</p>
@@ -97,7 +99,7 @@
         <article class="project-card scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">03</span><span class="status verified"><i></i> 174 TESTS</span></div>
           <div class="project-symbol graph" aria-hidden="true">RAG</div>
-          <div class="product-visual" data-visual="rag" aria-hidden="true"><div class="rag-map"><i class="node github">GH</i><i class="node search">?</i><i class="node answer">AI</i><span class="edge edge-one"></span><span class="edge edge-two"></span><div class="query-box">这个仓库如何处理认证？<b>→</b></div></div></div>
+          <div class="product-visual" data-visual="rag"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>github code rag / online workflow</span></div><img src="./assets/project-previews/code-rag.png" alt="GitHub Code RAG 仓库问答 Agent 演示界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>174</b><span>自动化测试</span><i></i><b>0</b><span>在线持久化</span></div></div>
           <p class="project-type">CODE INTELLIGENCE AGENT</p>
           <h3>GitHub Code RAG</h3>
           <p>面向 GitHub 仓库的代码问答与深度分析 Agent。默认在线问答不建立持久索引；需要复用知识时，用户可明确选择深度分析模式。</p>
@@ -116,7 +118,7 @@
         <article class="project-card scroll-reveal" data-categories="developer">
           <div class="card-topline"><span class="project-index">04</span><span class="status verified"><i></i> 34 TESTS</span></div>
           <div class="project-symbol atlas" aria-hidden="true">PA</div>
-          <div class="product-visual" data-visual="atlas" aria-hidden="true"><div class="atlas-map"><div class="orbit orbit-one"><i></i><i></i></div><div class="orbit orbit-two"><i></i><i></i><i></i></div><b>PA</b><span class="atlas-panel"><strong>7 projects</strong><small>3 ready to ship</small></span></div></div>
+          <div class="product-visual" data-visual="atlas"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>project atlas / local command center</span></div><img src="./assets/project-previews/atlas.png" alt="Project Atlas 本地项目指挥中心界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>34</b><span>自动化测试</span><i></i><b>2</b><span>平台 CI</span></div></div>
           <p class="project-type">LOCAL PROJECT COMMAND CENTER</p>
           <h3>Project Atlas</h3>
           <p>自动发现本机 Git 项目，并根据 README、Git、测试入口与 CI 证据判断成熟度，把分散的项目状态整理成一个本地指挥中心。</p>
@@ -135,7 +137,7 @@
         <article class="project-card scroll-reveal" data-categories="agent learning">
           <div class="card-topline"><span class="project-index">05</span><span class="status verified"><i></i> 33 TESTS</span></div>
           <div class="project-symbol ielts" aria-hidden="true">IA</div>
-          <div class="product-visual" data-visual="ielts" aria-hidden="true"><div class="plan-board"><header><span>Today’s plan</span><b>68%</b></header><div><i class="done">✓</i><span><strong>Listening</strong><small>Section 3 practice</small></span></div><div><i class="done">✓</i><span><strong>Vocabulary</strong><small>Review 24 words</small></span></div><div><i>3</i><span><strong>Writing</strong><small>Task 2 outline</small></span></div><div><i>4</i><span><strong>Speaking</strong><small>Part 2 recording</small></span></div></div></div>
+          <div class="product-visual" data-visual="ielts"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>ielts learning agent / daily plan</span></div><img src="./assets/project-previews/ielts-agent.png" alt="IELTS Learning Agent 每日学习计划界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>33</b><span>自动化测试</span><i></i><b>4</b><span>专项训练</span></div></div>
           <p class="project-type">PERSONALIZED LEARNING AGENT</p>
           <h3>IELTS Learning Agent</h3>
           <p>从用户画像到每日任务、训练反馈和错题沉淀的 IELTS 学习陪练。目标不是替代考官，而是让学习计划真正进入每天可执行的闭环。</p>
@@ -154,7 +156,7 @@
         <article class="project-card scroll-reveal" data-categories="agent">
           <div class="card-topline"><span class="project-index">06</span><span class="status live"><i></i> LIVE PRODUCT</span></div>
           <div class="project-symbol career" aria-hidden="true">职途</div>
-          <div class="product-visual" data-visual="career" aria-hidden="true"><div class="career-board"><div class="profile-row"><i>李</i><span><strong>软件工程实习生</strong><small>简历匹配分析</small></span><b>86%</b></div><div class="match-bars"><span style="--score:92%">技能匹配 <i></i></span><span style="--score:78%">项目经历 <i></i></span><span style="--score:66%">表达完整度 <i></i></span></div><div class="career-tip">建议突出 Code RAG 的 174 项测试证据</div></div></div>
+          <div class="product-visual" data-visual="career"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>career agent / secure workspace</span></div><img src="./assets/project-previews/career.png" alt="职途助手账号与求职工作台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>RAG</b><span>来源可追溯</span><i></i><b>D1</b><span>账号数据隔离</span></div></div>
           <p class="project-type">AI CAREER ASSISTANT</p>
           <h3>职途助手</h3>
           <p>面向大学生和求职新手的 AI 求职产品，把岗位检索、简历分析、求职问答和个人资料沉淀整合进一个可持续使用的求职工作台。</p>
@@ -172,7 +174,7 @@
         <article class="project-card scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">07</span><span class="status local"><i></i> LOCAL WINDOWS APP</span></div>
           <div class="project-symbol voice" aria-hidden="true">VF</div>
-          <div class="product-visual" data-visual="voice" aria-hidden="true"><div class="voice-console"><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="voice-controls"><span><small>VOICE</small><b>Warm</b></span><span><small>PITCH</small><b>+2</b></span><span><small>MIX</small><b>70%</b></span></div><div class="route"><i>MIC</i><span></span><i>AI</i><span></span><i>APP</i></div></div></div>
+          <div class="product-visual" data-visual="voice"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>voiceflow / realtime console</span></div><img src="./assets/project-previews/voiceflow.png" alt="VoiceFlow 实时变声产品控制台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>RVC</b><span>本地实时推理</span><i></i><b>WPF</b><span>Windows 桌面端</span></div></div>
           <p class="project-type">REAL-TIME AI VOICE PRODUCT</p>
           <h3>VoiceFlow 变声器</h3>
           <p>基于开源 VCClient 二次开发的 Windows 本地实时变声产品层，让普通用户通过桌面界面完成麦克风、虚拟声卡、音色和模型管理。</p>
