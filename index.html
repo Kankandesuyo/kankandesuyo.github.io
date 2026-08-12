@@ -3,11 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kankan 的软件工程与 AI Agent 个人作品集：本地优先、安全、可验证的真实产品。">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="李嘉豪的软件工程与 AI 应用作品集：7 个可运行、可测试、可验证的真实产品。">
+  <meta name="theme-color" content="#050505">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://kankandesuyo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="李嘉豪 · 软件工程与 AI 应用作品集">
+  <meta property="og:description" content="从问题定义到测试、部署与交付，查看 7 个真实可运行的软件产品。">
+  <meta property="og:url" content="https://kankandesuyo.github.io/">
+  <meta property="og:image" content="https://kankandesuyo.github.io/assets/project-previews/code-rag.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="李嘉豪 · 软件工程与 AI 应用作品集">
+  <meta name="twitter:description" content="可运行、可测试、可验证的软件工程与 AI 产品。">
+  <meta name="twitter:image" content="https://kankandesuyo.github.io/assets/project-previews/code-rag.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230b1220'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='Arial' font-weight='700' fill='%23c9ff47'%3EK%3C/text%3E%3C/svg%3E">
-  <title>Kankan · Software & AI Agent Portfolio</title>
+  <title>李嘉豪 · 软件工程与 AI 应用作品集</title>
   <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"李嘉豪","alternateName":"Kankan","url":"https://kankandesuyo.github.io/","sameAs":["https://github.com/Kankandesuyo"],"jobTitle":"软件工程学生 / AI 应用开发者","knowsAbout":["Python","FastAPI","React","Cloudflare","RAG","Software Security"]}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#projects">跳到作品</a>
@@ -18,11 +33,12 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="返回首页">
       <span class="brand-mark">K</span>
-      <span>KANKAN</span>
+      <span>李嘉豪 <small>/ KANKAN</small></span>
     </a>
     <nav aria-label="主导航">
       <a href="#projects">项目</a>
       <a href="#approach">方法</a>
+      <a href="#contact">联系</a>
       <a class="nav-resume" href="./assets/li-jiahao-software-engineering-resume.pdf" target="_blank" rel="noreferrer">简历 ↗</a>
       <a class="nav-github" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
@@ -30,12 +46,13 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
+      <p class="identity-line hero-reveal" style="--delay: .02s">李嘉豪 · 软件工程本科在读 · AI 应用 / Python 后端 / 全栈开发</p>
       <h1 class="hero-reveal" style="--delay: .08s" id="hero-title">把想法，<br><em>做成产品。</em></h1>
       <p class="hero-copy hero-reveal" style="--delay: .2s">我设计并实现真正可运行的软件。<br>从一个清晰的问题出发，用工程与 AI 把想法落地为可用、可测、可交付的产品。</p>
       <div class="hero-actions hero-reveal" style="--delay: .34s">
         <a class="button primary" href="#projects">查看精选项目 <span>↓</span></a>
         <a class="button secondary resume-button" href="./assets/li-jiahao-software-engineering-resume.pdf" target="_blank" rel="noreferrer">查看简历 <span>↗</span></a>
-        <a class="button secondary" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
+        <a class="button secondary" href="#contact">联系我 <span>↓</span></a>
       </div>
       <dl class="proof-strip hero-reveal" style="--delay: .43s" aria-label="作品集数据">
         <div><dt data-count="7" data-pad="2">07</dt><dd>精选产品</dd></div>
@@ -62,14 +79,14 @@
         <article class="project-card featured scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">01</span><span class="status live"><i></i> LIVE DEMO</span></div>
           <div class="project-symbol shield" aria-hidden="true">CG</div>
-          <div class="product-visual" data-visual="codeguard"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>codeguard / local security agent</span></div><img src="./assets/project-previews/codeguard.png" alt="CodeGuard 本地安全审查工作台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>49</b><span>自动化测试</span><i></i><b>0</b><span>npm 漏洞</span></div></div>
+          <div class="product-visual" data-visual="codeguard"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>codeguard / local security agent</span></div><img src="./assets/project-previews/codeguard.webp" alt="CodeGuard 本地安全审查工作台界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>49</b><span>自动化测试</span><i></i><b>0</b><span>npm 漏洞</span></div></div>
           <p class="project-type">LOCAL-FIRST SECURITY AGENT</p>
           <h3>CodeGuard</h3>
           <p>在代码提交前完成多语言静态安全审查。浏览器版在 Web Worker 中本地分析，确定性规则负责发现问题，云端模型仅在用户同意后解释已验证证据。</p>
           <ul class="highlights">
-            <li>多语言路由、CLI 与 SARIF 输出</li>
-            <li>证据行号复核、输入哈希与版本化报告</li>
-            <li>49 项测试 · npm audit 0 漏洞</li>
+            <li><b>问题</b>：提交前缺少快速、可复核的安全反馈</li>
+            <li><b>我负责</b>：规则引擎、证据复核、CLI 与 SARIF 交付</li>
+            <li><b>结果</b>：49 项测试 · npm audit 0 漏洞</li>
           </ul>
           <div class="tags"><span>React</span><span>AST</span><span>Web Worker</span><span>Security</span></div>
           <div class="card-actions">
@@ -81,32 +98,33 @@
         <article class="project-card scroll-reveal" data-categories="learning">
           <div class="card-topline"><span class="project-index">02</span><span class="status live"><i></i> LIVE PRODUCT</span></div>
           <div class="project-symbol word" aria-hidden="true">WF</div>
-          <div class="product-visual" data-visual="wordflow"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>wordflow / account learning</span></div><img src="./assets/project-previews/wordflow.png" alt="WordFlow IELTS 学习账号界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>7</b><span>主题课程</span><i></i><b>7901</b><span>IELTS 词汇</span></div></div>
+          <div class="product-visual" data-visual="wordflow"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>wordflow / account learning</span></div><img src="./assets/project-previews/wordflow.webp" alt="WordFlow IELTS 学习与账号同步界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>7</b><span>主题课程</span><i></i><b>7901</b><span>IELTS 词汇</span></div></div>
           <p class="project-type">OFFLINE-FIRST LEARNING PRODUCT</p>
           <h3>WordFlow IELTS</h3>
           <p>围绕“学习—回忆—评分—到期复习”闭环设计的 IELTS 主题词汇训练器。离线时核心学习仍可用，登录后再安全合并跨设备进度。</p>
           <ul class="highlights">
-            <li>间隔复习与主题课程</li>
-            <li>本地词典、离线翻译与在线降级提示</li>
-            <li>Cloudflare Pages + D1 账号同步</li>
+            <li><b>问题</b>：背词缺少可持续的复习闭环</li>
+            <li><b>我负责</b>：学习流程、本地词典与冲突安全同步</li>
+            <li><b>结果</b>：7 个主题课程 · 7901 个 IELTS 词汇</li>
           </ul>
           <div class="tags"><span>React</span><span>Cloudflare</span><span>D1</span><span>Offline-first</span></div>
           <div class="card-actions">
-            <a href="https://wordflow-ielts.pages.dev" target="_blank" rel="noreferrer">打开产品 ↗</a>
+            <a href="https://wordflow-ielts.pages.dev/" target="_blank" rel="noreferrer">打开产品 ↗</a>
+            <span class="availability">账号登录后使用</span>
           </div>
         </article>
 
         <article class="project-card scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">03</span><span class="status verified"><i></i> 174 TESTS</span></div>
           <div class="project-symbol graph" aria-hidden="true">RAG</div>
-          <div class="product-visual" data-visual="rag"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>github code rag / online workflow</span></div><img src="./assets/project-previews/code-rag.png" alt="GitHub Code RAG 仓库问答 Agent 演示界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>174</b><span>自动化测试</span><i></i><b>0</b><span>在线持久化</span></div></div>
+          <div class="product-visual" data-visual="rag"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>github code rag / online workflow</span></div><img src="./assets/project-previews/code-rag.webp" alt="GitHub Code RAG 仓库问答 Agent 演示界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>174</b><span>自动化测试</span><i></i><b>0</b><span>在线持久化</span></div></div>
           <p class="project-type">CODE INTELLIGENCE AGENT</p>
           <h3>GitHub Code RAG</h3>
           <p>面向 GitHub 仓库的代码问答与深度分析 Agent。默认在线问答不建立持久索引；需要复用知识时，用户可明确选择深度分析模式。</p>
           <ul class="highlights">
-            <li>仓库结构、技术栈、依赖与调用图分析</li>
-            <li>临时在线会话与持久知识库边界分离</li>
-            <li>FastAPI、容器交付与安全审计</li>
+            <li><b>问题</b>：陌生仓库理解成本高、答案缺少源码证据</li>
+            <li><b>我负责</b>：解析、混合检索、调用图与安全边界</li>
+            <li><b>结果</b>：174 项测试 · 在线临时分析可直接体验</li>
           </ul>
           <div class="tags"><span>Python</span><span>FastAPI</span><span>RAG</span><span>Chroma</span></div>
           <div class="card-actions">
@@ -115,10 +133,15 @@
           </div>
         </article>
 
-        <article class="project-card scroll-reveal" data-categories="developer">
+        <div class="more-projects-heading scroll-reveal">
+          <span>更多项目</span>
+          <p>不同场景，同一套可验证的工程方法。</p>
+        </div>
+
+        <article class="project-card compact scroll-reveal" data-categories="developer">
           <div class="card-topline"><span class="project-index">04</span><span class="status verified"><i></i> 34 TESTS</span></div>
           <div class="project-symbol atlas" aria-hidden="true">PA</div>
-          <div class="product-visual" data-visual="atlas"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>project atlas / local command center</span></div><img src="./assets/project-previews/atlas.png" alt="Project Atlas 本地项目指挥中心界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>34</b><span>自动化测试</span><i></i><b>2</b><span>平台 CI</span></div></div>
+          <div class="product-visual" data-visual="atlas"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>project atlas / local command center</span></div><img src="./assets/project-previews/atlas.webp" alt="Project Atlas 本地项目指挥中心界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>34</b><span>自动化测试</span><i></i><b>2</b><span>平台 CI</span></div></div>
           <p class="project-type">LOCAL PROJECT COMMAND CENTER</p>
           <h3>Project Atlas</h3>
           <p>自动发现本机 Git 项目，并根据 README、Git、测试入口与 CI 证据判断成熟度，把分散的项目状态整理成一个本地指挥中心。</p>
@@ -134,10 +157,10 @@
           </div>
         </article>
 
-        <article class="project-card scroll-reveal" data-categories="agent learning">
+        <article class="project-card compact scroll-reveal" data-categories="agent learning">
           <div class="card-topline"><span class="project-index">05</span><span class="status verified"><i></i> 33 TESTS</span></div>
           <div class="project-symbol ielts" aria-hidden="true">IA</div>
-          <div class="product-visual" data-visual="ielts"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>ielts learning agent / daily plan</span></div><img src="./assets/project-previews/ielts-agent.png" alt="IELTS Learning Agent 每日学习计划界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>33</b><span>自动化测试</span><i></i><b>4</b><span>专项训练</span></div></div>
+          <div class="product-visual" data-visual="ielts"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>ielts learning agent / daily plan</span></div><img src="./assets/project-previews/ielts-agent.webp" alt="IELTS Learning Agent 每日学习计划界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>33</b><span>自动化测试</span><i></i><b>4</b><span>专项训练</span></div></div>
           <p class="project-type">PERSONALIZED LEARNING AGENT</p>
           <h3>IELTS Learning Agent</h3>
           <p>从用户画像到每日任务、训练反馈和错题沉淀的 IELTS 学习陪练。目标不是替代考官，而是让学习计划真正进入每天可执行的闭环。</p>
@@ -153,10 +176,10 @@
           </div>
         </article>
 
-        <article class="project-card scroll-reveal" data-categories="agent">
+        <article class="project-card compact scroll-reveal" data-categories="agent">
           <div class="card-topline"><span class="project-index">06</span><span class="status live"><i></i> LIVE PRODUCT</span></div>
           <div class="project-symbol career" aria-hidden="true">职途</div>
-          <div class="product-visual" data-visual="career"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>career agent / secure workspace</span></div><img src="./assets/project-previews/career.png" alt="职途助手账号与求职工作台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>RAG</b><span>来源可追溯</span><i></i><b>D1</b><span>账号数据隔离</span></div></div>
+          <div class="product-visual" data-visual="career"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>career agent / secure workspace</span></div><img src="./assets/project-previews/career.webp" alt="职途助手账号与求职工作台界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>RAG</b><span>来源可追溯</span><i></i><b>D1</b><span>账号数据隔离</span></div></div>
           <p class="project-type">AI CAREER ASSISTANT</p>
           <h3>职途助手</h3>
           <p>面向大学生和求职新手的 AI 求职产品，把岗位检索、简历分析、求职问答和个人资料沉淀整合进一个可持续使用的求职工作台。</p>
@@ -171,10 +194,10 @@
           </div>
         </article>
 
-        <article class="project-card scroll-reveal" data-categories="agent developer">
+        <article class="project-card compact scroll-reveal" data-categories="agent developer">
           <div class="card-topline"><span class="project-index">07</span><span class="status local"><i></i> LOCAL WINDOWS APP</span></div>
           <div class="project-symbol voice" aria-hidden="true">VF</div>
-          <div class="product-visual" data-visual="voice"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>voiceflow / realtime console</span></div><img src="./assets/project-previews/voiceflow.png" alt="VoiceFlow 实时变声产品控制台界面" loading="lazy" decoding="async"></div><div class="media-proof"><b>RVC</b><span>本地实时推理</span><i></i><b>WPF</b><span>Windows 桌面端</span></div></div>
+          <div class="product-visual" data-visual="voice"><div class="media-frame"><div class="media-chrome"><i></i><i></i><i></i><span>voiceflow / realtime console</span></div><img src="./assets/project-previews/voiceflow.webp" alt="VoiceFlow 实时变声产品控制台界面" width="1200" height="760" loading="lazy" decoding="async"></div><div class="media-proof"><b>RVC</b><span>本地实时推理</span><i></i><b>WPF</b><span>Windows 桌面端</span></div></div>
           <p class="project-type">REAL-TIME AI VOICE PRODUCT</p>
           <h3>VoiceFlow 变声器</h3>
           <p>基于开源 VCClient 二次开发的 Windows 本地实时变声产品层，让普通用户通过桌面界面完成麦克风、虚拟声卡、音色和模型管理。</p>
@@ -204,14 +227,21 @@
       </div>
     </section>
 
-    <section class="contact-band scroll-reveal" aria-label="联系与更多作品">
-      <div><p class="section-kicker">LET'S BUILD SOMETHING USEFUL</p><h2>继续学习，也持续交付。</h2></div>
-      <a class="button light" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">在 GitHub 查看全部项目 <span>↗</span></a>
+    <section class="contact-band scroll-reveal" id="contact" aria-labelledby="contact-title">
+      <div><p class="contact-overline">AVAILABLE FOR SOFTWARE ENGINEERING INTERNSHIPS</p><h2 id="contact-title">一起做点真正有用的产品。</h2><p>正在寻找 AI 应用、Python 后端与全栈开发相关的软件工程实习机会。</p></div>
+      <div class="contact-actions">
+        <a class="button light" href="mailto:kankandesuyone@gmail.com">邮件联系 <span>↗</span></a>
+        <button class="button secondary copy-email" id="copy-email" type="button" data-email="kankandesuyone@gmail.com">复制邮箱 <span aria-hidden="true">＋</span></button>
+        <a class="button secondary" href="./assets/li-jiahao-software-engineering-resume.pdf" download>下载简历 <span>↓</span></a>
+        <a class="button secondary" href="https://github.com/Kankandesuyo" target="_blank" rel="noreferrer">查看 GitHub <span>↗</span></a>
+      </div>
+      <a class="contact-email" href="mailto:kankandesuyone@gmail.com">kankandesuyone@gmail.com</a>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year">2026</span> Kankan. Built with plain HTML, CSS &amp; JavaScript.</p>
+    <p>© <span id="year">2026</span> 李嘉豪 / Kankan. Built with plain HTML, CSS &amp; JavaScript.</p>
     <a href="./github-pages-upload/web/index.html">早期作品：自我探索工具 ↗</a>
   </footer>
 
